@@ -5,15 +5,29 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- ADD VIEWPORT FOR MOBILE DEVICE SUPPORT -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
+    <!-- INCLUDE THE NAVBAR -->
+    <%= render 'layouts/header' %>
 
-    <%= link_to "Home", root_path %>
-    <%= link_to "About", about_path %>
 
 
-<%= yield %>
+
+
+
+
+
+
+
+
+    <div class="container">
+      <!-- This wraps all of our page content/page body inside a container -->
+      <%= yield %>
+    </div>
+
 
 </body>
 </html>
