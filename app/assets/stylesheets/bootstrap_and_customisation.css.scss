@@ -1,5 +1,4 @@
 
-
 // Background color
 $body-bg: #E75845;
 // Font
@@ -25,6 +24,11 @@ $brand-primary: #E75845;
 // Primary button border
 $btn-primary-border: white;
 
+// Success button
+$btn-success-border: #E75845;
+$btn-success-bg: white;
+$btn-success-color: #E75845;
+
 
 // Heading color
 $headings-color: white;
@@ -33,4 +37,22 @@ $headings-color: white;
 // Text color
 $text-color: white;
 
+
 @import 'bootstrap';
+
+
+// THIS STUFF MUST BE BELOW THE @import 'bootstrap'
+
+
+// Center everything in the div
+.center {
+  text-align: center;
+}
+
+// Icon bar (hamburger icon lines) color
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+
+
