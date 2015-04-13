@@ -2,10 +2,12 @@ Rails.application.routes.draw do
   # get 'pages/home'
 
   # this routes http://localhost:3000 to app/views/pages/home.html.erb
+  # this can also be referred to via 'root_path'
   root 'pages#home'
 
   # this routes http://localhost:3000/about to app/views/pages/about.html.erb
   # it's basically asking the pages_controller to give us the 'about' view
+  # this can also be referred to via 'about_path'
   get 'about' => 'pages#about'
 
   # The priority is based upon order of creation: first created -> highest priority.
