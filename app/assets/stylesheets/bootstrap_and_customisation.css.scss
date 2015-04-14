@@ -1,4 +1,6 @@
 
+
+
 // Background color
 $body-bg: #E75845;
 // Font
@@ -11,7 +13,6 @@ $navbar-default-bg: #E75845;
 $navbar-default-link-color: white;
 // Navbar border radius
 $navbar-border-radius: 0px;
-
 
 // Jumbotron div background color
 $jumbotron-bg: #E75845;
@@ -38,11 +39,12 @@ $headings-color: white;
 $text-color: white;
 
 
+
 @import 'bootstrap';
 
 
-// THIS STUFF MUST BE BELOW THE @import 'bootstrap'
 
+// THIS STUFF MUST BE BELOW THE @import 'bootstrap'
 
 // Center everything in the div
 .center {
@@ -53,6 +55,7 @@ $text-color: white;
 .navbar-default .navbar-toggle .icon-bar {
   background-color: white;
 }
+
 
 
 
