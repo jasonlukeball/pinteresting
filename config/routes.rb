@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :installs
   # get 'pages/home'
 
   # this routes http://localhost:3000 to app/views/pages/home.html.erb

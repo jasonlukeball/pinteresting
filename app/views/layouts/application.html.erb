@@ -24,13 +24,9 @@
 
 
 
-    <!-- WRAP ALL THE PAGE CONTENT INSIDE A CONTAINER DIV -->
-    <div class="container">
-      <!-- FLASH MESSAGES -->
-      <% flash.each do |name, msg| %>
-        <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
-      <% end %>
 
+    <div class="container">
+      <!-- This wraps all of our page content/page body inside a container -->
       <%= yield %>
     </div>
 
