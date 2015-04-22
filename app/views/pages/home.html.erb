@@ -2,8 +2,15 @@
     <h1>Welcome to Pinterest!</h1>
     </br>
     <p>
-      <%= link_to "Click here to Sign up", "#thelink", class: "btn btn-primary btn-lg" %>
-      <%= link_to "Click here to Login", "#thelink", class: "btn btn-success btn-lg" %>
+      <% if user_signed_in? %>
+          # do something
+      <% else %>
+      <p>
+        <%= link_to "Click here to Sign up", "/users/sign_up", class: "btn btn-primary btn-lg" %>
+        <%= link_to "Click here to Login", "/users/sign_in", class: "btn btn-success btn-lg" %>
+      </p>
+  <% end %>
+
     </p>
 </div>
 
