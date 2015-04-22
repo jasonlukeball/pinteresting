@@ -32,7 +32,7 @@
       <!-- IS DISPLAYED ON THE PAGE AFTER A USER DOES SOMETHING -->
       <!-- IT SHOWS ONCE, IF THE REFRESH THE PAGE IT IS GONE -->
       <% flash.each do |name, msg| %>
-          <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+          <%= content_tag(:div, msg, class: "alert alert-info") %>
       <% end %>
 
 
