@@ -39,7 +39,8 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
-
+  # This is needed for Devise to let it know where to redirect users to
+  # Development URL
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
 end

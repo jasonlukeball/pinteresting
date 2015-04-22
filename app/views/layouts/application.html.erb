@@ -28,12 +28,11 @@
     <div class="container">
       <!-- This wraps all of our page content/page body inside a container -->
 
-      <!-- DEVISE AUTHENTICATION -->
-      <% if notice %>
-          <p class="alert alert-success"><%= notice %></p>
-      <% end %>
-      <% if alert %>
-          <p class="alert alert-danger"><%= alert %></p>
+      <!-- DEVISE AUTHENTICATION FLASH MESSAGE-->
+      <!-- IS DISPLAYED ON THE PAGE AFTER A USER DOES SOMETHING -->
+      <!-- IT SHOWS ONCE, IF THE REFRESH THE PAGE IT IS GONE -->
+      <% flash.each do |name, msg| %>
+          <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
       <% end %>
 
 
