@@ -3,26 +3,36 @@ class PinsController < ApplicationController
 
   # GET /pins
   # GET /pins.json
+  # GET PINS LIST
   def index
     @pins = Pin.all
   end
 
+
   # GET /pins/1
   # GET /pins/1.json
+  # READ INDIVIDUAL PIN
   def show
   end
 
+
   # GET /pins/new
+  # GET NEW PIN PAGE
   def new
     @pin = Pin.new
   end
 
+
   # GET /pins/1/edit
+  # GET EDIT PIN PAGE
   def edit
   end
 
+
+
   # POST /pins
   # POST /pins.json
+  # CREATE NEW PIN
   def create
     @pin = Pin.new(pin_params)
 
@@ -37,12 +47,15 @@ class PinsController < ApplicationController
     end
   end
 
+
+
   # PATCH/PUT /pins/1
   # PATCH/PUT /pins/1.json
+  # UPDATE PIN
   def update
     respond_to do |format|
       if @pin.update(pin_params)
-        format.html { redirect_to @pin, notice: 'Pin was successfully updated.' }
+        format.html { redirect_to @pin, notice: 'Pin was successfully updated...' }
         format.json { render :show, status: :ok, location: @pin }
       else
         format.html { render :edit }
@@ -51,8 +64,11 @@ class PinsController < ApplicationController
     end
   end
 
+
+
   # DELETE /pins/1
   # DELETE /pins/1.json
+  # DELETE PIN
   def destroy
     @pin.destroy
     respond_to do |format|
@@ -60,6 +76,8 @@ class PinsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
