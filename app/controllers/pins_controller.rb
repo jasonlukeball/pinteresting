@@ -1,3 +1,4 @@
+
 class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
 
@@ -10,7 +11,6 @@ class PinsController < ApplicationController
 
 
   # GET /pins/1
-  # GET /pins/1.json
   # READ INDIVIDUAL PIN
   def show
   end
@@ -31,34 +31,31 @@ class PinsController < ApplicationController
 
 
   # POST /pins
-  # POST /pins.json
   # CREATE NEW PIN
   def create
-    @pin = Pin.new(pin_params)
-      if @pin.save
-        redirect_to @pin, notice: 'Pin was successfully created.'
-      else
-        render :new
-      end
+  @pin = Pin.new(pin_params)
+    if @pin.save
+      redirect_to @pin, notice: 'Pin was successfully created.'
+    else
+      render :new
+    end
   end
 
 
 
   # PATCH/PUT /pins/1
-  # PATCH/PUT /pins/1.json
   # UPDATE PIN
   def update
-      if @pin.update(pin_params)
-        redirect_to @pin, notice: 'Pin was successfully updated...'
-      else
-        render :edit
-      end
+    if @pin.update(pin_params)
+      redirect_to @pin, notice: 'Pin was successfully updated...'
+    else
+      render :edit
+    end
   end
 
 
 
   # DELETE /pins/1
-  # DELETE /pins/1.json
   # DELETE PIN
   def destroy
     @pin.destroy
