@@ -25,6 +25,9 @@ gem 'bootstrap-sass'
 # Devise (Authentication)
 gem 'devise'
 
+# Paperclip (File Attachment Gem)
+# https://github.com/thoughtbot/paperclip
+gem 'paperclip', '~> 4.2'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
