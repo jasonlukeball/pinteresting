@@ -1,9 +1,19 @@
 
 class PinsController < ApplicationController
+
+  # STANDARD METHODS
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
 
+  # YOU CAN ONLY EDIT, UPDATE OR DELETE PINS YOU HAVE CREATED
+  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+
+  # USER MUST BE LOGGED IN TO GET TO THE PINS PAGES
+  before_filter :require_login
+
+
+
   # GET /pins
-  # GET /pins.json
   # GET PINS LIST
   def index
     @pins = Pin.all
@@ -19,7 +29,7 @@ class PinsController < ApplicationController
   # GET /pins/new
   # GET NEW PIN PAGE
   def new
-    @pin = Pin.new
+    @pin = current_user.pins.build
   end
 
 
@@ -33,7 +43,7 @@ class PinsController < ApplicationController
   # POST /pins
   # CREATE NEW PIN
   def create
-  @pin = Pin.new(pin_params)
+  @pin = current_user.pins.build(pin_params)
     if @pin.save
       redirect_to @pin, notice: 'Pin was successfully created.'
     else
@@ -68,6 +78,19 @@ class PinsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_pin
       @pin = Pin.find(params[:id])
+    end
+
+    # USER MUST BE LOGGED IN TO GET TO THE PINS PAGES
+    def require_login
+      unless current_user
+        redirect_to root_path
+      end
+    end
+
+    # SAFEGAURD SO THAT EVEN IF A USER ENTERED THE ID FOR A PIN IN THE URL, THEY STILL CANT EDIT
+    def correct_user
+      @pin = current_user.pins.find_by(id: params[:id])
+      redirect_to pins_path, notice: "Not Authorised to edit this pin" if @pin.nil?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
