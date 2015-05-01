@@ -29,6 +29,10 @@ gem 'devise'
 # https://github.com/thoughtbot/paperclip
 gem 'paperclip', '~> 4.2'
 
+# AMAZON AWS FOR IMAGE STORAGE
+gem 'aws-sdk', '~> 2'
+
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   # Use sqlite3 for development and testing only

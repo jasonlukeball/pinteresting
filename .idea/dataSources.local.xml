@@ -3,5 +3,11 @@
   <component name="dataSourceStorageLocal">
     <data-source name="Rails pinteresting: development" uuid="95d93a19-a65c-4f3f-92e0-70600d7ccede" />
     <data-source name="Rails pinteresting: test" uuid="a213a50a-f02e-42c3-baef-2fea77e04ae7" />
+    <data-source name="Rails pinteresting: production" uuid="206f5b72-0c85-4e29-881d-3b48fd411f26">
+      <secret-storage>master_key</secret-storage>
+      <user-name>dwqbkszyiuozwl</user-name>
+      <schema-pattern>dfr3vvp91o2c58.*</schema-pattern>
+      <default-schemas>dfr3vvp91o2c58.*</default-schemas>
+    </data-source>
   </component>
 </project>
