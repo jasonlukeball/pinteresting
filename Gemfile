@@ -30,7 +30,7 @@ gem 'devise'
 gem 'paperclip', '~> 4.2'
 
 # AMAZON AWS FOR IMAGE STORAGE
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk', '< 2.0'
 
 
 group :development, :test do
