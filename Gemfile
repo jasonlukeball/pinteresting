@@ -12,6 +12,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+gem 'jquery-turbolinks'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -32,6 +35,8 @@ gem 'paperclip', '~> 4.2'
 # AMAZON AWS FOR IMAGE STORAGE
 gem 'aws-sdk', '< 2.0'
 
+# JQUERY LIBRARY TO DISPLAY PINS AS A GRED
+gem 'masonry-rails', '~> 0.2.0'
 
 
 group :development, :test do
