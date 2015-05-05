@@ -1,0 +1,88 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>ID</th>
+      <th>Description</th>
+      <th>user_id</th>
+      <th>user_email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pins.each do |pin| %>
+      <tr>
+        <td><%= image_tag pin.image.url(:medium) %></td>
+        <td><%= pin.id %>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><%= pin.description %>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><%= pin.user_id %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><%= pin.user.email %>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><%= link_to 'Show', pin_path(pin) %>&nbsp;&nbsp;</td>
+
+        <% if pin.user == current_user %>
+            <!-- ONLY SHOW EDIT & DESTROY BUTTONS IF THIS PIN WAS CREATED BY THE CURRENT USER -->
+            <td><%= link_to 'Edit', edit_pin_path(pin) %>&nbsp;&nbsp;</td>
+            <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+  <% end %>
+  </tbody>
+
+</table>
+
+<br>
+
+<% if user_signed_in? %>
+    <!-- ONLY SHOW NEW PIN BUTTON IF USER IS SIGNED IN -->
+    <%= link_to '+ New Pin', new_pin_path %>
+<% end %>
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pins</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Image</th>
+    <th>ID</th>
+    <th>Description</th>
+    <th>user_id</th>
+    <th>user_email</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @pins.each do |pin| %>
+      <tr>
+        <td><%= image_tag pin.image.url(:medium) %></td>
+        <td><%= pin.id %>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><%= pin.description %>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><%= pin.user_id %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><%= pin.user.email %>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><%= link_to 'Show', pin_path(pin) %>&nbsp;&nbsp;</td>
+
+        <% if pin.user == current_user %>
+            <!-- ONLY SHOW EDIT & DESTROY BUTTONS IF THIS PIN WAS CREATED BY THE CURRENT USER -->
+            <td><%= link_to 'Edit', edit_pin_path(pin) %>&nbsp;&nbsp;</td>
+            <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+  <% end %>
+  </tbody>
+
+</table>
+
+<br>
+
+<% if user_signed_in? %>
+    <!-- ONLY SHOW NEW PIN BUTTON IF USER IS SIGNED IN -->
+    <%= link_to '+ New Pin', new_pin_path %>
+<% end %>

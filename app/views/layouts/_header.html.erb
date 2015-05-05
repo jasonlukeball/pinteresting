@@ -20,12 +20,20 @@
 
              <!-- CONDITIONALLY DISPLAY LOGIN ON LOGOUT -->
               <% if user_signed_in? %>
+                 <!-- ONLY SHOW NEW PIN BUTTON IF USER IS SIGNED IN -->
+                  <li><%= link_to "+ NEW PIN", new_pin_path %></li>
                   <li><%= link_to "SETTINGS", edit_user_registration_path %></li>
                   <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></li>
               <% else %>
                   <li><%= link_to "LOGIN", new_user_session_path %></li>
               <% end %>
             </ul>
+
+
+
+            <% if user_signed_in? %>
+
+            <% end %>
 
 
           </div><!-- /.navbar-collapse -->
