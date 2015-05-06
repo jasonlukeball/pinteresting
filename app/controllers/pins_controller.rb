@@ -12,7 +12,6 @@ class PinsController < ApplicationController
   before_filter :require_login
 
 
-
   # GET /pins
   # GET PINS LIST
   def index
