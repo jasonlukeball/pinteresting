@@ -9,6 +9,7 @@
             </br>
 
             <div class="panel-body">
+              <div class="pinDescription">
                 ID: <%= pin.id %>
                 </br>
                 DESC: <%= pin.description %>
@@ -17,13 +18,13 @@
                 </br>
                 USER EMAIL: <%= pin.user.email %>
                 </br>
-                <%= link_to 'Show', pin_path(pin) %>
-
-                <% if pin.user == current_user %>
-                    <!-- ONLY SHOW EDIT & DESTROY BUTTONS IF THIS PIN WAS CREATED BY THE CURRENT USER -->
-                    <%= link_to 'Edit', edit_pin_path(pin) %>
-                    <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+                    <%= link_to 'Show', pin_path(pin) %>
+                    <% if pin.user == current_user %>
+                        <!-- ONLY SHOW EDIT & DESTROY BUTTONS IF THIS PIN WAS CREATED BY THE CURRENT USER -->
+                        <%= link_to 'Edit', edit_pin_path(pin) %>
+                        <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
                 <% end %>
+              </div>
             </div>
 
 

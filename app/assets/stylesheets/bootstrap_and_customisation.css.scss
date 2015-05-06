@@ -38,6 +38,7 @@ $headings-color: white;
 // Text color
 $text-color: white;
 
+
 // Link color
 $link-color: white;
 
@@ -46,6 +47,8 @@ $alert-info-bg: #E75845;
 $alert-info-text: white;
 $alert-info-border: white;
 
+// Default Panel background
+$panel-bg: white;
 
 @import 'bootstrap';
 
@@ -61,6 +64,18 @@ $alert-info-border: white;
 // Icon bar (hamburger icon lines) color
 .navbar-default .navbar-toggle .icon-bar {
   background-color: white;
+}
+
+// This is for the Text in the Pin Panel
+
+.pinDescription {
+  color: black;
+}
+
+// Target the anchor tags
+
+.pinDescription a {
+  color: #E75845;
 }
 
 
