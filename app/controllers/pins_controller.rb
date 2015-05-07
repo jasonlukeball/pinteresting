@@ -8,8 +8,7 @@ class PinsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
-  # USER MUST BE LOGGED IN TO GET TO THE PINS PAGES
-  before_filter :require_login
+
 
 
   # GET /pins
