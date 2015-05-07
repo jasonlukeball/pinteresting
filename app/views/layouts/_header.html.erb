@@ -15,17 +15,59 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse navbar-ex1-collapse">
            <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to "HOME", root_path %></li>
-              <li><%= link_to "ABOUT", about_path %></li>
+
+
+             <!-- HOME -->
+             <li>
+               <%= link_to root_path do %>
+                   <span class="glyphicon glyphicon-home"></span> Home
+               <% end %>
+             </li>
+
+
+             <!-- ABOUT US -->
+             <li>
+               <%= link_to about_path do %>
+                   <span class="glyphicon glyphicon-info-sign"></span> About
+               <% end %>
+             </li>
+
 
              <!-- CONDITIONALLY DISPLAY LOGIN ON LOGOUT -->
               <% if user_signed_in? %>
+
                  <!-- ONLY SHOW NEW PIN BUTTON IF USER IS SIGNED IN -->
-                  <li><%= link_to "+ NEW PIN", new_pin_path %></li>
-                  <li><%= link_to "SETTINGS", edit_user_registration_path %></li>
-                  <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></li>
+
+
+                 <!-- NEW PIN -->
+                 <li>
+                   <%= link_to new_pin_path do %>
+                       <span class="glyphicon glyphicon-plus"></span> New Pin
+                   <% end %>
+                 </li>
+
+
+                 <!-- USER SETTINGS -->
+                 <li>
+                   <%= link_to edit_user_registration_path do %>
+                       <span class="glyphicon glyphicon-user"></span> Settings
+                   <% end %>
+                 </li>
+
+
+                 <!-- LOGOUT -->
+                 <li>
+                   <%= link_to destroy_user_session_path, method: :delete do %>
+                       <span class="glyphicon glyphicon-log-out"></span> Log Out
+                   <% end %>
+                 </li>
+
+
               <% else %>
-                  <li><%= link_to "LOGIN", new_user_session_path %></li>
+
+
+
+
               <% end %>
             </ul>
 

@@ -12,6 +12,7 @@
             <p></p><%= @pin.description %></p>
             <p><strong><%= @pin.user.email %></strong></p>
             <% if @pin.user == current_user %>
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                 <p><%= link_to 'Edit', edit_pin_path(@pin) %></p>
             <% end %>
           </div>
