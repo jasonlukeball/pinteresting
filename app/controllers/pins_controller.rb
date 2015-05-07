@@ -7,9 +7,7 @@ class PinsController < ApplicationController
   # YOU CAN ONLY EDIT, UPDATE OR DELETE PINS YOU HAVE CREATED
   before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-
-
-
+  
 
   # GET /pins
   # GET PINS LIST
