@@ -7,12 +7,12 @@ class PinsController < ApplicationController
   # YOU CAN ONLY EDIT, UPDATE OR DELETE PINS YOU HAVE CREATED
   before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-  
+
 
   # GET /pins
-  # GET PINS LIST
+  # GET PINS LIST IN REVERSE CHRONOLOGICAL ORDER
   def index
-    @pins = Pin.all
+    @pins = Pin.all.order("created_at DESC")
   end
 
 
