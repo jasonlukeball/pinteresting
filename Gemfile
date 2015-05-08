@@ -35,8 +35,6 @@ gem 'aws-sdk', '< 2.0'
 # JQUERY LIBRARY TO DISPLAY PINS AS A GRID
 gem 'masonry-rails', '~> 0.2.0'
 
-# LAZY LOAD RAILS FOR LAZY IMAGE LOADING
-gem 'lazyload-rails'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
