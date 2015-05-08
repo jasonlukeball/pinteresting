@@ -18,6 +18,10 @@
 //= require masonry/jquery.masonry
 //= require_tree .
 
+$("img").lazyload();
+
+
+
 
 
 

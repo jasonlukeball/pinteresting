@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 
@@ -33,9 +32,11 @@ gem 'paperclip', '~> 4.2'
 # AMAZON AWS FOR IMAGE STORAGE
 gem 'aws-sdk', '< 2.0'
 
-# JQUERY LIBRARY TO DISPLAY PINS AS A GRED
+# JQUERY LIBRARY TO DISPLAY PINS AS A GRID
 gem 'masonry-rails', '~> 0.2.0'
 
+# LAZY LOAD RAILS FOR LAZY IMAGE LOADING
+gem 'lazyload-rails'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
