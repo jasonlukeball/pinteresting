@@ -79,6 +79,15 @@ $panel-bg: white;
   color: #E75845;
 }
 
+// THIS GIVES VERTICAL SPACING AROUND BUTTONS
+@media(max-width:767px){
+  .btn {
+
+    margin-bottom: 10px;
+  }
+}
+
+
 
 
 
