@@ -6,4 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :pins
 
+  # VALIDATION - MUST GIVE USERNAME
+  validates :name, presence: true
+
 end
