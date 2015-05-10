@@ -41,6 +41,8 @@ gem 'aws-sdk', '< 2.0'
 # JQUERY LIBRARY TO DISPLAY PINS AS A GRID
 gem 'masonry-rails', '~> 0.2.0'
 
+# PAGINATION
+gem 'will_paginate', '~> 3.0'
 
 
 
