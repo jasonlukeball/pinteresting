@@ -43,13 +43,26 @@ $text-color: white;
 // Link color
 $link-color: white;
 
-// Flash alert styles
+// FLASH ALERT STYLES
 $alert-info-bg: #E75845;
 $alert-info-text: white;
 $alert-info-border: white;
 
+
 // Default Panel background
 $panel-bg: white;
+
+
+// PAGINATION
+
+// TEXT COLOR (NON ACTIVE)
+$pagination-color: black;
+// ACTIVE PAGE BORDER
+$pagination-active-border: white;
+// HOVER TEXT COLOR
+$pagination-hover-color: black;
+
+
 
 @import 'bootstrap';
 
@@ -90,6 +103,3 @@ $panel-bg: white;
 
 
 
-
-// PURPLE     #E75845
-// RUBY RED   #E75845

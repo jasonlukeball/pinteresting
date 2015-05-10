@@ -44,6 +44,9 @@ gem 'masonry-rails', '~> 0.2.0'
 # PAGINATION
 gem 'will_paginate', '~> 3.0'
 
+# PAGINATION BOOTSTRAP
+gem 'will_paginate-bootstrap'
+
 
 
 
