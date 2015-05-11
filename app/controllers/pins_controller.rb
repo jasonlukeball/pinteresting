@@ -12,7 +12,7 @@ class PinsController < ApplicationController
   # GET /pins
   # GET PINS LIST IN REVERSE CHRONOLOGICAL ORDER
   def index
-    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
+    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 12)
     # .paginate(:page => params[:page], :per_page => 2)
   end
 
