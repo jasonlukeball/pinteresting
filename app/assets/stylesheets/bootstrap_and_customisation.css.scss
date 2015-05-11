@@ -92,10 +92,9 @@ $pagination-hover-color: black;
   color: #E75845;
 }
 
-// THIS GIVES VERTICAL SPACING AROUND BUTTONS
+// THIS GIVES VERTICAL SPACING AROUND BUTTONS FOR PHONES
 @media(max-width:767px){
   .btn {
-
     margin-bottom: 10px;
   }
 }
