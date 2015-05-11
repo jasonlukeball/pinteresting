@@ -39,6 +39,7 @@
                  <!-- ONLY SHOW NEW PIN BUTTON IF USER IS SIGNED IN -->
 
 
+
                  <!-- NEW PIN -->
                  <li>
                    <%= link_to new_pin_path do %>
@@ -50,7 +51,7 @@
                  <!-- USER SETTINGS -->
                  <li>
                    <%= link_to edit_user_registration_path do %>
-                       <span class="glyphicon glyphicon-user"></span> Settings
+                       <span class="glyphicon glyphicon-user"></span> <%= current_user.name %>
                    <% end %>
                  </li>
 
