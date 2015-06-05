@@ -8,8 +8,8 @@
                 <%= pin.description %>
                 </br>
                 <!-- SHOW USERNAME IF IT EXISTS -->
-                <% if @pin.user %>
-                    <p><strong><%= @pin.user.name %></strong></p>
+                <% if pin.user %>
+                    <p><strong><%= pin.user.name %></strong></p>
                 <% else %>
                     <p><strong>Anonymous</strong></p>
                 <% end %>
