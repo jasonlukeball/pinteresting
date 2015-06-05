@@ -10,8 +10,15 @@
       <div class="pinDescription">
           <div class="panel-body">
             <p></p><%= @pin.description %></p>
-            <p><strong><%= @pin.user.name if @pin.user %></strong></p>
-            <% if @pin.user == current_user %>
+
+
+            <% if @pin.user %>
+                <p><strong><%= @pin.user.name if @pin.user %></strong></p>
+            <% else %>
+                <p><strong>Anonymous</strong></p>
+            <% end %>
+
+                <% if @pin.user == current_user %>
                 <!-- EDIT -->
                 <p>
                   <%= link_to edit_pin_path(@pin) do %>
