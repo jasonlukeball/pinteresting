@@ -7,7 +7,7 @@
               <div class="pinDescription">
                 <%= pin.description %>
                 </br>
-                <strong><%= pin.user.name %></strong>
+                <strong><%= pin.user.name if pin.user %></strong>
                 </br>
                 <% if pin.user == current_user %>
                     <!-- ONLY SHOW EDIT & DESTROY BUTTONS IF THIS PIN WAS CREATED BY THE CURRENT USER -->
