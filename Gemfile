@@ -59,7 +59,6 @@ group :development, :test do
 end
 
 group :production do
-  gem 'ruby', '2.2.4'
   # Use Postgres database for production
   gem 'pg'
   gem 'rails_12factor'
