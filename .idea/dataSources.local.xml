@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Rails pinteresting: development" uuid="95d93a19-a65c-4f3f-92e0-70600d7ccede" />
-    <data-source name="Rails pinteresting: test" uuid="a213a50a-f02e-42c3-baef-2fea77e04ae7" />
+    <data-source name="Rails pinteresting: development" uuid="95d93a19-a65c-4f3f-92e0-70600d7ccede">
+      <database-info product="SQLite" version="3.8.7" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" dbms="SQLITE" exact-version="3.8.7" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="Rails pinteresting: test" uuid="a213a50a-f02e-42c3-baef-2fea77e04ae7">
+      <database-info product="SQLite" version="3.8.7" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" dbms="SQLITE" exact-version="3.8.7" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
     <data-source name="Rails pinteresting: production" uuid="206f5b72-0c85-4e29-881d-3b48fd411f26">
+      <database-info product="PostgreSQL" version="9.3.6" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)" dbms="POSTGRES" exact-version="9.3.6">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>dwqbkszyiuozwl</user-name>
-      <schema-pattern>dfr3vvp91o2c58.*</schema-pattern>
-      <default-schemas>dfr3vvp91o2c58.*</default-schemas>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="database" qname="dfr3vvp91o2c58">
+            <node kind="schema" negative="1" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
   </component>
 </project>
