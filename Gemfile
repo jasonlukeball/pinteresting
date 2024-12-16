@@ -11,7 +11,7 @@ gem 'turbolinks'                      # Turbolinks makes following links in your
 gem 'jquery-turbolinks'
 gem 'bootstrap-sass'                  # Bootstrap
 gem 'devise'                          # Devise (Authentication)
-gem 'paperclip', '~> 4.2'             # Paperclip (File Attachment Gem) https://github.com/thoughtbot/paperclip
+gem 'paperclip', '~> 5.2'             # Paperclip (File Attachment Gem) https://github.com/thoughtbot/paperclip
 gem 'aws-sdk', '< 2.0'                # AMAZON AWS FOR IMAGE STORAGE
 gem 'masonry-rails', '~> 0.2.0'       # JQUERY LIBRARY TO DISPLAY PINS AS A GRID
 gem 'will_paginate', '~> 3.0'         # PAGINATION
